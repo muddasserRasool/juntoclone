@@ -27,4 +27,4 @@ jobs:
         run: npm install -g surge
         
       - name: deploying on surge
-        run: surge ./build https://redqueenrace-by-muddasserr.surge.sh --token ${{secrets.SURGETOKEN}}  
+        run: surge ./build https://juntodigitalclone-by-muddasserr.surge.sh --token ${{secrets.SURGETOKEN}}  
