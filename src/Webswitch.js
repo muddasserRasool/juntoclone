@@ -14,20 +14,26 @@ export default function Webswitch() {
       <div>
         <nav className="NavBar">
           <ul>
+          <img width="160" height="52" src="https://junto.digital/wp-content/uploads/2019/01/logo-junto-main.png" className="logo" alt="Junto Logo" />
+          </ul>
+          <ul className="components">
           <li>
-              <Link to="/components/Home">Home</Link>
+              <Link to="/components/GetStarted">
+                <span className="button">Get Started &#10132;</span></Link>
             </li>
+            <li>
+              <Link to="/components/Services">Services &#x2207;</Link>
+            </li>
+            
+            <li>
+              <Link to="/components/Blog">Blog</Link>
+            </li>
+            
             <li>
               <Link to="/components/Aboutus">About us</Link>
             </li>
             <li>
-              <Link to="/components/Blog">Blog</Link>
-            </li>
-            <li>
-              <Link to="/components/Services">Services</Link>
-            </li>
-            <li>
-              <Link to="/components/GetStarted">Get Started</Link>
+              <Link style={{textDecoration:"underline", textDecorationColor:"#91C691"}} to="/components/Home">Home</Link>
             </li>
             
           </ul>
