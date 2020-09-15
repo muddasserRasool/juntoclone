@@ -22,9 +22,6 @@
   font-weight: 500;
 }
 
-
-
-
 .NavBar li a{
   display: block;
   color:black;
@@ -48,9 +45,67 @@
   transition: all .25s ease;
 }
 
+.Hi{
+  color: #91C691;
+  margin-left: 0;
+  padding-bottom: 0%;
+  padding-left: 40px;
+  position: relative;
+  top: 150%
 
+}
+.help{
+  margin-left: 0;
+  padding-left: 40px;
+  padding-top: 0%;
+  font-size: 300%;
+}
 
+.HamburgerButton{
+  height: 3rem;
+    width: 3rem;
+    position: relative;
+    font-size: 12px;
 
-/* .NavBar li:hover {
-  background-color: #111;
-} */
+    display: none;
+
+    /* @media only screen and (max-width: 40em) {
+      display: block;
+    } */
+
+    /* Remove default button styles */
+    border: none;
+    background: black;
+    outline: none;
+
+    cursor: pointer;
+  }
+    .HamburgerButton:after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 150%;
+      width: 150%;
+      top: -25%;
+      left: -25%;
+    }
+
+    .HamburgerButton:before {
+      height: 2px;
+      pointer-events: none;
+      display: block;
+      content: "";
+      width: 100%;
+      background-color:yellow;
+      position: absolute;
+    }
+
+    .HamburgerButton:after {
+      /* Move bottom line below center line */
+      top: -0.8rem;
+    }
+
+    .HamburgerButton:before {
+      /* Move top line on top of center line */
+      top: 0.8rem;
+    }
