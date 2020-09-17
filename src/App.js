@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Webswitch from './Webswitch';
+import Webswitch from './components/Webswitch';
 
 function App() {
   return (

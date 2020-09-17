@@ -12,8 +12,10 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
+import { Link } from "react-router-dom";
 import ListItemText from '@material-ui/core/ListItemText';
+import ListItem from '@material-ui/core/ListItem';
+
 
 
 
@@ -89,6 +91,9 @@ export default function PersistentDrawerRight() {
     setOpen(false);
   };
 
+
+  
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -136,24 +141,31 @@ export default function PersistentDrawerRight() {
           </IconButton>
         </div>
         <Divider />
-        <List>
-          {['Home', 'Get Started', 'Blog', 'Services'].map((text, index) => (
-            <ListItem button key={text}>
-              {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        {/* <Divider /> */}
         {/* <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          {['Home', 'Get Started', , 'Services'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
         </List> */}
+        <List >
+        <ListItem button >
+        <Link style={{textDecoration:"None"}} to="/Home"><ListItemText primary="Home" /></Link>
+        </ListItem>
+        <ListItem button >
+        <Link style={{textDecoration:"None"}} to="/Aboutus"><ListItemText primary="About us" /></Link>
+        </ListItem>
+        <ListItem button >
+        <Link style={{textDecoration:"None"}} to="/Blog"><ListItemText primary="Blog" /></Link>
+        </ListItem>
+        <ListItem button >
+        <Link style={{textDecoration:"None"}} to="/Services"><ListItemText primary="Services" /></Link>
+        </ListItem>
+        </List>
+        
+      
       </Drawer>
+     
     </div>
   );
 }

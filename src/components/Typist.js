@@ -44,6 +44,19 @@ export default function TypistAnimate() {
                     <Typist.Backspace count={24} delay={1200} />
                     <span>optimize conversions.</span>
                     <Typist.Backspace count={24} delay={1200} />
+                    <span>grow your business.</span>
+                    <Typist.Backspace count={19} delay={1200} />
+                    <span>look sexy online.</span>
+                    <Typist.Backspace count={19} delay={1200} />
+                    <span>outrank the competition.</span>
+                    <Typist.Backspace count={24} delay={1200} />
+                    <span>create badass content.</span>
+                    <Typist.Backspace count={24} delay={1200} />
+                    <span>generate more leads.</span>
+                    <Typist.Backspace count={24} delay={1200} />
+                    <span>optimize conversions.</span>
+                    <Typist.Backspace count={24} delay={1200} />
+                    
                 </Typist>
             </div>
         )
