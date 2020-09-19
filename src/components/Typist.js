@@ -56,7 +56,6 @@ export default function TypistAnimate() {
                     <Typist.Backspace count={24} delay={1200} />
                     <span>optimize conversions.</span>
                     <Typist.Backspace count={24} delay={1200} />
-                    
                 </Typist>
             </div>
         )

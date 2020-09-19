@@ -30,7 +30,10 @@ export default function Webswitch() {
 
   const Navbar = () => {
     return (
-      <nav className="NavBar">
+      <div className="NavBar">
+        <br />
+        <br />
+        <br />
         
         <ul className="components">
           <li>
@@ -53,7 +56,7 @@ export default function Webswitch() {
           </li>
 
         </ul>
-      </nav>
+      </div>
     )
   }
 
