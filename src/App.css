@@ -131,3 +131,8 @@
 .icon{
   font-size: 20px;
 }
+
+.containershow:hover{
+ 
+    transition: scale(2, 1); 
+}

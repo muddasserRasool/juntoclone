@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import useWebAnimations, { slideInLeft } from "@wellyshen/use-web-animations";
 import TwoContainers from './twocontainers';
 
+
+
 export default function Junto() {
 
   const ArrowMove = useWebAnimations();
@@ -54,6 +56,7 @@ export default function Junto() {
       <br />
       <br />
       <TwoContainers />
+      
 
     </div>
   )
