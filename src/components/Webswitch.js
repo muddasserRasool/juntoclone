@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from './Home';
 import Aboutus from './Aboutus';
@@ -15,7 +15,7 @@ import {GlobalMobile} from '../App.js';
 export default function Webswitch() {
 
   const isMobile = useContext(GlobalMobile)
-  console.log(isMobile)
+
 
   // const [windowDimension, setWindowDimension] = useState(null);
 

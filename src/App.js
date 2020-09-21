@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   const isMobile = windowDimension <= 1000;
-  console.log(isMobile)
+
 
   return (
     <div className="App">

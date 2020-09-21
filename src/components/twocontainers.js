@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import useWebAnimations, { fadeInUp } from "@wellyshen/use-web-animations";
 import '../App.css';
-
+import {GlobalMobile} from '../App.js';
 
 
 
@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function TwoContainers() {
+    const isMobile = useContext(GlobalMobile);
     const classes = useStyles();
     const [Readmore, setReadmore] = useState(false)
     const [Readmore2, setReadmore2] = useState(false)
@@ -40,7 +41,8 @@ export default function TwoContainers() {
 
         e1.addEventListener("mouseenter", (e) => {
             setReadmore(true)
-            console.log(Readmore)
+
+            if(!isMobile){
             Makebigger.animate({
                 keyframes: {
                     transform: ["translate(60px, -70px)"],
@@ -51,11 +53,13 @@ export default function TwoContainers() {
                     easing: "ease-in-out",
                 }
             });
+        }
             Smoothin.animate({ ...fadeInUp })
-            console.log(Makebigger)
+    
         })
         e1.addEventListener("mouseleave", (e) => {
             setReadmore(false)
+            if(!isMobile){
             Makebigger.animate({
                 keyframes: {
                     transform: ["translate(0, 0)"], // Move by 500px
@@ -67,11 +71,13 @@ export default function TwoContainers() {
                     easing: "ease-in-out",
                 }
             });
+            }
         })
 
         e2.addEventListener("mouseenter", (e) => {
             setReadmore2(true)
-            console.log(Readmore2)
+        
+            if(!isMobile){
             Makebigger2.animate({
                 keyframes: {
                     transform: ["translate(-60px, -70px)"],
@@ -82,11 +88,13 @@ export default function TwoContainers() {
                     easing: "ease-in-out",
                 }
             });
+        }
             Smoothin2.animate({ ...fadeInUp })
-            console.log(Makebigger2)
+    
         })
         e2.addEventListener("mouseleave", (e) => {
             setReadmore2(false)
+            if(!isMobile){
             Makebigger2.animate({
                 keyframes: {
                     transform: ["translate(0, 0)"], // Move by 500px
@@ -98,6 +106,7 @@ export default function TwoContainers() {
                     easing: "ease-in-out",
                 }
             });
+        }
         })
     });
 
