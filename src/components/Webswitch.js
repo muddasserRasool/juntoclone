@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from './Home';
 import Aboutus from './Aboutus';
@@ -7,26 +7,34 @@ import GetStarted from './GetStarted';
 import Services from './Services';
 import Blog from './Blog';
 import PersistentDrawerRight from './MobileNavbar';
+import {GlobalMobile} from '../App.js';
+
+
 
 
 export default function Webswitch() {
 
-  const [windowDimension, setWindowDimension] = useState(null);
+  const isMobile = useContext(GlobalMobile)
+  console.log(isMobile)
 
-  useEffect(() => {
-    setWindowDimension(window.innerWidth);
-  }, []);
+  // const [windowDimension, setWindowDimension] = useState(null);
 
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimension(window.innerWidth);
-    }
+  // useEffect(() => {
+  //   setWindowDimension(window.innerWidth);
+  // }, []);
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // useEffect(() => {
+  //   function handleResize() {
+  //     setWindowDimension(window.innerWidth);
+  //   }
 
-  const isMobile = windowDimension <= 1000;
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
+
+  // const isMobile = windowDimension <= 1000;
+ 
+
 
   const Navbar = () => {
     return (

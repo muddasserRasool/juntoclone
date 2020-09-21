@@ -1,19 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import TypistAnimate from './Typist';
 import { Link } from "react-router-dom";
 import useWebAnimations, { slideInLeft } from "@wellyshen/use-web-animations";
 import TwoContainers from './twocontainers';
+import {GlobalMobile} from '../App.js';
 
 
 
 export default function Junto() {
+  const isMobile = useContext(GlobalMobile);
 
   const ArrowMove = useWebAnimations();
 
 
   useEffect(() => {
     const e1 = document.getElementById("icon");
-    e1.addEventListener("mousemove", (e) => {
+    e1.addEventListener("mouseenter", (e) => {
       ArrowMove.animate({ ...slideInLeft });
     });
   }, [ArrowMove]);
@@ -39,10 +41,11 @@ export default function Junto() {
         </li>
         <li >
           <Link to="/Aboutus">
-            <span className="fontAdjust">How we Work</span></Link><span> &nbsp; &nbsp; </span> <span className="icon" id="icon" ref={ArrowMove.ref} >  &#10230;</span>
+            <span className="fontAdjust" id="icon">How we Work</span></Link><span> &nbsp; &nbsp; </span> <span className="icon"  ref={ArrowMove.ref} >  &#10230;</span>
         </li>
       </ul>
-      <video className="Video" loop muted="" autoplay="" poster="https://junto.digital/wp-content/uploads/2018/09/hero-home.jpg" src="https://junto.digital/wp-content/uploads/2018/12/junto-digital-hero.webm" />
+      {!isMobile && <video className="Video" loop muted="" autoplay="" src="https://junto.digital/wp-content/uploads/2018/12/junto-digital-hero.webm" />}
+      {isMobile && <video className="Video" loop muted="" autoplay="" poster="https://junto.digital/wp-content/uploads/2018/09/hero-home.jpg" />}
       <br />
       <br />
       <br />
