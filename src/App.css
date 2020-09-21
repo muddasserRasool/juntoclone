@@ -1,3 +1,6 @@
+
+
+
 .components {
   list-style-type: none;
   margin: 0px;
@@ -132,7 +135,38 @@
   font-size: 20px;
 }
 
-.containershow:hover{
+.Goal{
+  color: #91C691;
+ text-align: center;
+}
+.What{
  
-    transition: scale(2, 1); 
+  font-size: 330%;
+  text-align: center;
+}
+.Ranking{
+  text-align: center;
+  background-color:#cbced1;
+  margin: 10px auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  min-width: 250px;
+  max-width: 650px;
+  max-height: 1000px;
+  color: #FFF;
+  padding: 15px;
+}
+
+.RankingText{
+  color: #18242A;
+}
+.companyName{
+  font-weight: bold;
+}
+.logos{
+  padding: 10px;
+  margin: 0%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }

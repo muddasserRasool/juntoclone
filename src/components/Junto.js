@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useWebAnimations, { slideInLeft } from "@wellyshen/use-web-animations";
 import TwoContainers from './twocontainers';
 import {GlobalMobile} from '../App.js';
+import Ranking from './Ranking';
 
 
 
@@ -58,7 +59,17 @@ export default function Junto() {
       <br />
       <br />
       <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <TwoContainers />
+      <br />
+      <br />
+      <h3 className="Goal">OUR CLIENTS’ GOALS ARE OUR GOALS</h3>
+      <h1 className="What">Here’s what they have to say.</h1>
+
+      <Ranking />
       
 
     </div>
